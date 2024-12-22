@@ -9,6 +9,7 @@ export const useGetCallById = (id: string | string[]) => {
 
   useEffect(() => {
     if (!client) return;
+    if(id==="") return;
     
     const loadCall = async () => {
       try {
