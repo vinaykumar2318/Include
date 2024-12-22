@@ -7,13 +7,6 @@ import {StreamVideo, StreamVideoClient} from "@stream-io/video-react-sdk";
 import { ReactNode, useEffect, useState } from "react";
 
 const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
-//   const userId = "user-id";
-//   const token = "authentication-token";
-//   const user: User = { id: userId };
-  
-//   const client = new StreamVideoClient({ apiKey, user, token });
-//   const call = client.call("default", "my-first-call");
-//   call.join({ create: true });
   
   export const StreamVideoProvider = ({children}:{children: ReactNode}) => {
     const [videoClient , setVideoClient] = useState<StreamVideoClient>();
@@ -41,9 +34,6 @@ const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 
     return (
       <StreamVideo client={videoClient}>
-        {/* <StreamCall call={call}>
-            
-        </StreamCall> */}
         {children}
       </StreamVideo>
     );
